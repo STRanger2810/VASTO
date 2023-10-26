@@ -1,0 +1,79 @@
+
+    /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+/* Estilos de los paneles */
+.panels-container {
+    display: flex;
+    overflow: hidden;
+    border-radius: 0 0 5px 5px;
+}
+
+.panels {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    min-width: 100%;
+}
+
+.panel {
+    min-width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+.panel h2 {
+    font-size: 24px;
+    color: #3498db;
+}
+
+.panel p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Flechas de navegación */
+.arrow-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.arrow {
+    font-size: 24px;
+    cursor: pointer;
+    color: #3498db;
+}
+
+.arrow:hover {
+    color: #2774b3;
+}

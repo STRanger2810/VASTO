@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>VASTO - Tu plataforma mayorista</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+    
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        h1 {
+            font-size: 36px;
+        }
+    
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    
+        .panels-container {
+            display: flex;
+            overflow: hidden;
+        }
+    
+        .panels {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .panel {
+            min-width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            text-align: left;
+        }
+    
+        h2 {
+            font-size: 24px;
+            color: #3498db;
+        }
+    
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+    
+        .arrow-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+    
+        .arrow {
+            font-size: 24px;
+            cursor: pointer;
+            color: #3498db;
+        }
+    
+        .arrow:hover {
+            color: #2774b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Encabezado como antes -->
+        <!-- ... -->
+    </header>
+    <div class="container">
+        <div class="panels-container">
+            <div class="panels">
+                <!-- Primer Panel -->
+                <div class="panel">
+                    <h2>¿Qué es VASTO?</h2>
+                    <p>VASTO es la solución perfecta para emprendedores mayoristas que desean promocionar sus productos y precios de manera efectiva. Con VASTO, puedes publicar tus productos y permitir que otros usuarios revisen y compren tus productos al por mayor.</p>
+                </div>
+                <!-- Segundo Panel -->
+                <div class="panel">
+                    <h2>Descubre más de nuestro producto</h2>
+                    <p>Elaboramos una aplicación que permite a los clientes buscar los productos de manera eficiente y conseguir resultados de mayoristas cercanos con una comparación de precios.</p>
+                </div>
+                <!-- Tercer Panel -->
+                <div class="panel">
+                    <h2>Comparación de Precios</h2>
+                    <img src="tu-imagen-comparacion-precios.jpg" alt="Comparación de Precios">
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow-container">
+            <div class="arrow arrow-left" onclick="scrollToNextPanel(-1)">&#9664;</div>
+            <div class="arrow arrow-right" onclick="scrollToNextPanel(1)">&#9654;</div>
+        </div>
+    </div>
+
+    <script>
+        const panels = document.querySelector('.panels');
+        let currentPanel = 0;
+
+        function scrollToNextPanel(direction) {
+            currentPanel += direction;
+            currentPanel = Math.min(2, Math.max(0, currentPanel)); // Limit to 0, 1, 2
+
+            const panelWidth = panels.clientWidth;
+            panels.style.transform = `translateX(-${currentPanel * panelWidth}px)`;
+        }
+    </script>
+</body>
+</html>
